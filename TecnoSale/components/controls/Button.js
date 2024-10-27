@@ -3,24 +3,24 @@ import { TouchableOpacity, Text, StyleSheet } from "react-native";
 import Colors from "../../constants/Colors";
 import Fonts from "../../constants/Fonts";
 
-export default function Button({ label, type = 'black', onPress }) {
+export default function Button({ label, type = "black", onPress }) {
   return (
-    <TouchableOpacity onPress={onPress} style={[
-      styles.container,
-      type === 'white' && styles.containerWhite
-    ]}>
+    <TouchableOpacity
+      onPress={onPress}
+      style={[styles.container, type === "white" && styles.containerWhite]}
+    >
       <Text style={styles.text}>{label}</Text>
     </TouchableOpacity>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
-    backgroundColor: Colors.black,
+    alignItems: "center",
+    backgroundColor: Colors.purple,
     borderRadius: 25,
     paddingVertical: 10,
-    width: '100%',
+    width: "100%",
   },
   text: {
     color: Colors.white,
