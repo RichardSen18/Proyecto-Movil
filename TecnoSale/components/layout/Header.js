@@ -17,7 +17,7 @@ export function Header({ title, showBack = false, showCart = true }) {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={goToBack}>
         <Ionicons name="arrow-back-outline" size={50} color="black" />
       </TouchableOpacity>
 
