@@ -25,7 +25,7 @@ export function Header({ title, showBack = false, showCart = true }) {
         {title && <Text style={styles.title}>{title}</Text>}
         <Image
           style={styles.logo}
-          sourse={require("../../assets/Icon_purple.png")}
+          sourse={require("../../assets/icon.png")}
         />
       </View>
 

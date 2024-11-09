@@ -15,7 +15,7 @@ export default function Login({ navigation }) {
       <Header showBack={true} showCart={false} />
       <ImageBackground
         style={styles.background}
-        source={require("../assets/Icon_purple.png")}
+        source={require("../assets/icon.png")}
       ></ImageBackground>
       <Content>
         <Title title="Estoy listo para comprar." />

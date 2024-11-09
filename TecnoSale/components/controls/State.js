@@ -1,23 +1,20 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { AntDesing } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 import Fonts from "../../constants/Fonts";
 import Colors from "../../constants/Colors";
-import { Title } from "../layout";
 
-export default function State(item) {
+export default function State({ item }) {
   return (
     <View style={styles.container}>
       <TouchableOpacity>
-        <AntDesing name="edit" size={20} color={Colors.purple}/>
+        <AntDesign name="edit" size={20} color={Colors.black} />
       </TouchableOpacity>
       <View style={styles.leftColumn}>
         <Text style={styles.title}>{item.name}</Text>
         <Text style={styles.code}>{item.code}</Text>
       </View>
       <View style={styles.rightColumn}>
-        <Text style={styles.status}>
-          {item.status ? "Activo" : "Inactivo "}
-        </Text>
+        <Text style={styles.status}>{item.status ? "Activo" : "Inactivo"}</Text>
       </View>
     </View>
   );

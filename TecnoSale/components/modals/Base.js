@@ -1,17 +1,16 @@
 import {
   Modal,
   TouchableOpacity,
-  View,
   Text,
+  View,
   StyleSheet,
   Dimensions,
 } from "react-native";
-import Fonts from "../../constants/Fonts";
 import Colors from "../../constants/Colors";
 
 const { height, width } = Dimensions.get("window");
 
-export function Base({ id, title, visible, children, onClose }) {
+export default function Base({ id, title, visible, children, onClose }) {
   return (
     <Modal
       key={id}
@@ -28,14 +27,12 @@ export function Base({ id, title, visible, children, onClose }) {
               <Text>{title}</Text>
             </View>
           )}
+          <View>{children}</View>
         </View>
-
-        <View>{children}</View>
       </View>
     </Modal>
   );
 }
-
 const styles = StyleSheet.create({
   centeredView: {
     flex: 1,

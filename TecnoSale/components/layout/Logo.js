@@ -6,7 +6,7 @@ export function Logo({
   type = 'black',
   width,
 }) {
-  const image = type === 'black' ? require('../../assets/Icon_purple.png') : require('../../assets/Icon_white.png');
+  const image = type === 'black' ? require('../../assets/icon.png') : require('../../assets/Icon_white.png');
   const size = width || windowWidth * 0.6;
 
   return (
