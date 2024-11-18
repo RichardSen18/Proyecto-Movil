@@ -11,7 +11,7 @@ export default function Home({ navigation }) {
   const [visible, setVisible] = useState(false);
   const [selected, setSelected] = useState();
   const data = [
-    { id: 1, name: 'Querétaro', code: 'QRO', status: true },
+    { id: 1, name: 'Queretaro', code: 'QRO', status: true },
     { id: 2, name: 'Guerrero', code: 'GUE', status: true },
     { id: 3, name: 'Guanajuato', code: 'GUA', status: false },
   ];

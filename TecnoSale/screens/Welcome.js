@@ -9,6 +9,10 @@ export default function Welcome({ navigation }) {
     navigation.navigate("Login");
   };
 
+  const goToSignup = () => {
+    navigation.navigate("Signup");
+  };
+
   return (
     <Wrapper backgroundColor={Colors.purple}>
       <Content>
@@ -18,7 +22,9 @@ export default function Welcome({ navigation }) {
         >
           <Logo type="black" />
         </ImageBackground>
-        <Title color={Colors.purple} title="Bienvenid@ a TecnoSale" />
+
+        <Title color={Colors.purple} title="Bienvenido a TecnoSale" />
+
         <Button
           style={styles.boton}
           onPress={goToLogin}
@@ -27,7 +33,7 @@ export default function Welcome({ navigation }) {
         />
         <Button
           style={styles.boton}
-          onPress={goToLogin}
+          onPress={goToSignup}
           label={"Registrarme"}
           type="white"
         />
@@ -42,8 +48,5 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginTop: 40,
     width: "100%",
-  },
-  boton: {
-    margin: 50,
   },
 });

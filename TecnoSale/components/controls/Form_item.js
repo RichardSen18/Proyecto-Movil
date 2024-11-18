@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     color: Colors.black,
     fontSize: Fonts.size.small,
     fontFamily: Fonts.family.regular,
-    textAling: "center",
+    textAlign: "center",
   },
   input: {
     borderColor: Colors.purple,

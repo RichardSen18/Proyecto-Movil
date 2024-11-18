@@ -5,7 +5,7 @@ import Button from "../components/controls/Button";
 import FormItem from "../components/controls/Form_item";
 import Colors from "../constants/Colors";
 
-export default function Login({ navigation }) {
+export default function Signup({ navigation }) {
   const goToHome = () => {
     navigation.navigate("Dashboard");
   };
@@ -13,14 +13,12 @@ export default function Login({ navigation }) {
   return (
     <Wrapper backgroundColor={Colors.purple}>
       <Header showBack={true} showCart={false} />
-
       <ImageBackground
         style={styles.background}
-        source={require("../assets/Icon_white.png")}
+        source={require("../assets/icon.png")}
       ></ImageBackground>
-
       <Content>
-        <Title title="Estoy listo para comprar." />
+        <Title title="Registrarme." />
         <FormItem label="Nombre de usuario"></FormItem>
         <FormItem label="Contraseña"></FormItem>
         <Button label="ACCEDER" onPress={goToHome} />

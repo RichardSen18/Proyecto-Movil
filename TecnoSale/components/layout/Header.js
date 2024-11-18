@@ -1,10 +1,12 @@
 import { View, Image, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons, EvilIcons } from "@expo/vector-icons";
+
 import Colors from "../../constants/Colors";
 import Fonts from "../../constants/Fonts";
 
 export function Header({ title, showBack = false, showCart = true }) {
+  
   const navigation = useNavigation();
 
   const goToBack = () => {
@@ -17,33 +19,47 @@ export function Header({ title, showBack = false, showCart = true }) {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={goToBack}>
-        <Ionicons name="arrow-back-outline" size={50} color="black" />
-      </TouchableOpacity>
+      {showBack ? (
+        <TouchableOpacity onPress={goToBack}>
+          <Ionicons name="arrow-back-outline" size={40} color="black" />
+        </TouchableOpacity>
+      ) : (
+        <TouchableOpacity onPress={showDrawer}>
+          <Ionicons name="menu" size={40} color="black" />
+        </TouchableOpacity>
+      )}
 
-      <View style={styles.container_logo}>
+      <View style={styles.logoContainer}>
         {title && <Text style={styles.title}>{title}</Text>}
-        <Image
-          style={styles.logo}
-          sourse={require("../../assets/icon.png")}
-        />
+        <Image style={styles.logo} source={require('../../assets/Icon_white.png')} />
       </View>
 
-      <TouchableOpacity>
-        <EvilIcons name="cart" size={50} color="black" />
-      </TouchableOpacity>
+      {showCart ? (
+        <TouchableOpacity>
+          <EvilIcons name="cart" size={40} color="black" />
+        </TouchableOpacity>
+      ) : (<View></View>)}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     paddingBottom: 30,
     paddingHorizontal: 30,
-    paddingTop: 30,
+    paddingTop: 40,
+  },
+  logo: {
+    height: 50,
+    width: 50,
+  },
+  logoContainer: {
+    alignItems: 'center',
+    border: 10,
+    borderColor: Colors.black,
   },
   title: {
     backgroundColor: Colors.white,
@@ -56,23 +72,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 5,
     marginBottom: 10,
-  },
-  container_logo: {
-    alignItems: "center",
-  },
-  logo: {
-    with: 50,
-    height: 50,
-  },
-
-  textImput: {
-    borderWidth: 1.5,
-    borderRadius: 10,
-    borderColor: "purple",
-    padding: 10,
-    paddingStart: 30,
-    width: "80%",
-    height: 50,
-    marginTop: 20,
   },
 });

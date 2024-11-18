@@ -1,8 +1,12 @@
 import { View, StyleSheet } from "react-native";
 import Colors from "../../constants/Colors";
 
-export function Content({ children }) {
-  return <View style={styles.container}>{children}</View>;
+export function Content ({ children }) {
+  return (
+    <View style={styles.container}>
+      {children}
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -16,6 +20,5 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop: 100,
     margin: 20,
-    
   },
 });
