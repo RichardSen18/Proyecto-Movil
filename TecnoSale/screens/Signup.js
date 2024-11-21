@@ -28,6 +28,6 @@ export default function Signup({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.purple
+    backgroundColor: Colors.purple,
   },
 });
