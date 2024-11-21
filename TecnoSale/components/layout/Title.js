@@ -14,7 +14,7 @@ export function Title({ title, color }) {
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 30,
+    marginBottom: 20,
   },
   text: {
     fontFamily: Fonts.family.bold,

@@ -31,7 +31,7 @@ export function Header({ title, showBack = false, showCart = true }) {
 
       <View style={styles.logoContainer}>
         {title && <Text style={styles.title}>{title}</Text>}
-        <Image style={styles.logo} source={require('../../assets/Icon_white.png')} />
+        <Image style={styles.logo} source={require('../../assets/icon-white.jpg')} />
       </View>
 
       {showCart ? (
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     paddingBottom: 30,
     paddingHorizontal: 30,
     paddingTop: 40,

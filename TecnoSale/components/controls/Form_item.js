@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     color: Colors.black,
     fontSize: Fonts.size.small,
     fontFamily: Fonts.family.regular,
-    textAlign: "center",
+    textAlign: "left",
   },
   input: {
     borderColor: Colors.purple,
@@ -29,6 +29,6 @@ const styles = StyleSheet.create({
     color: Colors.black,
     fontSize: Fonts.size.normal,
     paddingBottom: 5,
-    paddingTop: 5,
+    paddingTop: 10,
   },
 });

@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     fontSize: Fonts.size.normal,
   },
   containerWhite: {
-    borderColor: Colors.white,
+    borderColor: Colors.purple,
     borderRadius: 10,
     borderWidth: 2,
   },

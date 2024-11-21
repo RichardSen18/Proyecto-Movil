@@ -6,7 +6,7 @@ export function Logo({
   type = 'black',
   width,
 }) {
-  const image = type === 'black' ? require('../../assets/icon.png') : require('../../assets/Icon_white.png');
+  const image = type === 'black' ? require('../../assets/icon.jpg') : require('../../assets/icon-white.jpg');
   const size = width || windowWidth * 0.6;
 
   return (
@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 10,
+    borderRadius: 10,
   }
 });
