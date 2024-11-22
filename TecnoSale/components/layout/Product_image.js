@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Image, StyleSheet } from "react-native";
 
-export function ProductImage() {
+export function Product_image() {
   return (
     <View>
       <Image

@@ -5,7 +5,7 @@ import { Product_image } from "./Product_image";
 import Fonts from "../../constants/Fonts";
 import { FontAwesome } from "@expo/vector-icons";
 
-export function ProductItemCart({ label, price, onDelete }) {
+export function Product_item_card({ label, price, onDelete }) {
   const [quantity, setQuantity] = useState(1);
 
   const increaseQuantity = () => setQuantity(quantity + 1);

@@ -1,20 +1,26 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
-import { Button } from "../controls/Button";
+import { ButtonClassTree } from "../controls/Button";
 import { Product_image } from "./Product_image";
 
 import Colors from "../../constants/Colors";
 import Fonts from "../../constants/Fonts";
-export function Product_item({ label, price }) {
+
+export function Product_item({ label, price, navigation }) {
+  const gotoProducto = () => {
+    navigation.navigate("Producto"); // Asegúrate de que 'Producto' esté definido en el Navigator
+  };
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <Product_image />
       </View>
+
       {label && <Text style={styles.title}>{label}</Text>}
       {price && <Text style={styles.price}>{price}</Text>}
+
       <View style={styles.buttonContainer}>
-        <Button label={"Add to cart"} />
+        <ButtonClassTree label={"Add to cart"} onPress={gotoProducto} />
       </View>
     </View>
   );
@@ -38,7 +44,8 @@ const styles = StyleSheet.create({
     width: "90%",
     alignItems: "center",
     height: 85,
-    marginTop: 200,
+    marginTop: 210,
+
     position: "absolute",
   },
   title: {

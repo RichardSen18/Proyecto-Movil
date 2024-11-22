@@ -14,6 +14,17 @@ export default function Button({ label, type = "black", onPress }) {
   );
 }
 
+export function ButtonClassTree({ label, type = "black", onPress }) {
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      style={[styles.container2, type === "white" && styles.containerWhite]}
+    >
+      <Text style={styles.text}>{label}</Text>
+    </TouchableOpacity>
+  );
+}
+
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
@@ -31,5 +42,12 @@ const styles = StyleSheet.create({
     borderColor: Colors.purple,
     borderRadius: 10,
     borderWidth: 2,
+  },
+  container2: {
+    alignItems: "center",
+    backgroundColor: Colors.purple,
+    borderRadius: 10,
+    width: "90%",
+    marginTop: 50,
   },
 });

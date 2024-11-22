@@ -1,7 +1,9 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
+import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 import Home from "../screens/Home";
 import Profile from "../screens/Profile";
-import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
+import Shoping from "../screens/Shoping";
+import Producto from "../screens/Producto"
 import Colors from "../constants/Colors";
 import Fonts from "../constants/Fonts";
 
@@ -50,6 +52,16 @@ export default function Dashboard() {
       <Drawer.Screen
         name="Profile"
         component={Profile}
+        options={{ headerShown: false }}
+      />
+      <Drawer.Screen
+        name="Shoping"
+        component={Shoping}
+        options={{ headerShown: false }}
+      />
+      <Drawer.Screen
+        name="Producto"
+        component={Producto}
         options={{ headerShown: false }}
       />
     </Drawer.Navigator>

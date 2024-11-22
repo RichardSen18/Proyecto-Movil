@@ -1,12 +1,10 @@
 import React from "react";
 import { View, StyleSheet, Dimensions } from "react-native";
 import { Wrapper2 } from "./Wrapper";
-import Fonts from "../../constants/Fonts";
-import Colors from "../../constants/Colors";
 
 const { width } = Dimensions.get("window");
 
-export default function ProductContainer({ children }) {
+export default function Product_container({ children }) {
   return (
     <Wrapper2>
       <View style={styles.container}>{children}</View>
@@ -21,5 +19,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "flex-start",
     padding: 10,
+    rowGap: 20,
   },
 });

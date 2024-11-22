@@ -2,10 +2,11 @@ import FormItem from "../components/controls/Form_item";
 import { Content, Header, Wrapper } from "../components/layout/";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import Button from '../components/controls/Button';
+import Colors from "../constants/Colors";
 
 export default function Profile() {
   return (
-    <Wrapper>
+    <Wrapper backgroundColor={Colors.purple}>
       {/* Encabezado */}
       <Header title="Perfil" showBack={true} />
 

@@ -7,10 +7,22 @@ export function Wrapper({ children, backgroundColor }) {
     </View>
   );
 }
+export function Wrapper2({ children, backgroundColor }) {
+  return (
+    <View style={[styles.container2, { backgroundColor }]}>
+      <ScrollView>{children}</ScrollView>
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.black,
     flex: 1,
   },
+  container2: {
+    backgroundColor: Colors.ghostWhite,
+    alignItems:"center",
+    paddingBottom:150
+  }
 });

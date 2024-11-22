@@ -1,53 +1,86 @@
-import { useState } from 'react';
-import { FlatList, ScrollView } from 'react-native';
+import React, { useState } from "react";
+import {
+  ImageBackground,
+  View,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
+import Product_container from "../components/layout/Product_container";
+import { Product_item } from "../components/layout/Product_item";
+import { Header } from "../components/layout/";
 
-import { Content, Header, Wrapper } from '../components/layout';
-import State from '../components/controls/State';
-import Base from '../components/modals/Base';
-import FormItem from '../components/controls/Form_item';
-import Button from '../components/controls/Button';
+import Colors from "../constants/Colors";
+import Fonts from "../constants/Fonts";
 
 export default function Home({ navigation }) {
-  const [visible, setVisible] = useState(false);
-  const [selected, setSelected] = useState();
-  const data = [
-    { id: 1, name: 'Queretaro', code: 'QRO', status: true },
-    { id: 2, name: 'Guerrero', code: 'GUE', status: true },
-    { id: 3, name: 'Guanajuato', code: 'GUA', status: false },
-  ];
+  const [selectedFilter, setSelectedFilter] = useState("");
 
-  const toggleModal = () => {
-    setVisible(!visible);
+  const handleFilterChange = (value) => {
+    setSelectedFilter(value);
+    console.log("Filter selected:", value);
   };
 
   return (
-    <Wrapper>
-      <Header title="Dashboard" />
-
-      <Content>
-        {visible && (
-          <Base
-            id="modal-state"
-            visible={visible}
-            title={"Editar estado"}
-            onClose={toggleModal}
-          >
-            <FormItem label="Nombre" />
-            <FormItem label="Código" />
-            <FormItem label="Estatus" />
-          </Base>
-        )}
-
-        <Button label="Abrir modal" onPress={toggleModal} />
-        
-        <ScrollView horizontal={true}>
-          <FlatList
-            data={data}
-            renderItem={State}
-            keyExtractor={item => item.id}
-          />
-        </ScrollView>
-      </Content>
-    </Wrapper>
+    <View style={styles.container}>
+      <Header title="Home" />
+      <Product_container style={styles.productContainer}>
+        <Product_item
+          label={"Componente"}
+          price={"$00.00"}
+          navigation={navigation}
+        />
+        <Product_item
+          label={"Componente"}
+          price={"$00.00"}
+          navigation={navigation}
+        />
+        <Product_item
+          label={"Componente"}
+          price={"$00.00"}
+          navigation={navigation}
+        />
+        <Product_item
+          label={"Componente"}
+          price={"$00.00"}
+          navigation={navigation}
+        />
+        <Product_item
+          label={"Componente"}
+          price={"$00.00"}
+          navigation={navigation}
+        />
+      </Product_container>
+    </View>
   );
-};
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  content: {
+    padding: 5,
+  },
+  productContainer: {
+    flex: 1,
+    backgroundColor: Colors.black,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    padding: 100,
+    paddingBottom: 20,
+  },
+  image: {
+    flex: 1,
+    justifyContent: "center",
+  },
+  button: {
+    alignSelf: "center",
+    marginRight: 210,
+    flexDirection: "row",
+    width: "40%",
+    marginTop: -5,
+    gap: 5,
+    paddingBottom: 20,
+  },
+});

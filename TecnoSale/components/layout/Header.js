@@ -17,6 +17,10 @@ export function Header({ title, showBack = false, showCart = true }) {
     navigation.openDrawer();
   };
 
+  const goToShoping = () => {
+    navigation.navigate("Shoping");
+  };
+
   return (
     <View style={styles.container}>
       {showBack ? (
@@ -35,7 +39,7 @@ export function Header({ title, showBack = false, showCart = true }) {
       </View>
 
       {showCart ? (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={goToShoping}>
           <EvilIcons name="cart" size={40} color="black" />
         </TouchableOpacity>
       ) : (<View></View>)}
@@ -62,7 +66,7 @@ const styles = StyleSheet.create({
   },
   title: {
     backgroundColor: Colors.white,
-    borderColor: Colors.platinum,
+    borderColor: Colors.purple,
     borderRadius: 20,
     borderWidth: 1,
     color: Colors.jet,
