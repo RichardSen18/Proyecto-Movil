@@ -11,10 +11,9 @@ export default function Profile() {
       <Header title="Perfil" showBack={true} />
 
       <Content>
-        {/* Imagen de perfil */}
         <View style={styles.profileContainer}>
           <Image
-            source={{ uri: "https://via.placeholder.com/150" }} // URL de ejemplo
+            source={{ uri: "https://i.pinimg.com/736x/e9/b9/44/e9b944514038b9a625512f7bfc52e283.jpg" }} // URL de ejemplo
             style={styles.profileImage}
           />
           <TouchableOpacity style={styles.editButton}>
@@ -22,14 +21,12 @@ export default function Profile() {
           </TouchableOpacity>
         </View>
 
-        {/* Información del perfil */}
         <FormItem label="Correo electrónico" />
         <FormItem label="Nombre Completo" />
         <FormItem label="Teléfono" />
         <FormItem label="Fecha de Nacimiento" />
         <FormItem label="Dirección" />
 
-        {/* Botones de acción */}
         <View style={styles.actionsContainer}>
           <Button label="Guardar Cambios" onPress={() => alert("Cambios guardados")} />
           <Button label="Cerrar Sesión" onPress={() => alert("Sesión cerrada")} />

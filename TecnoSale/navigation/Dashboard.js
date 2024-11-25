@@ -13,7 +13,7 @@ function CustomDrawerContent(props) {
   return (
     <View style={styles.drawerContainer}>
       <Image
-        source={{ uri: "https://via.placeholder.com/150" }}
+        source={{ uri: "https://i.pinimg.com/736x/e9/b9/44/e9b944514038b9a625512f7bfc52e283.jpg" }}
         style={styles.profileImage}
       />
       <Text style={styles.title}>Usuario</Text>

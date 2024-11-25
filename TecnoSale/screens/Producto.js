@@ -12,7 +12,7 @@ export default function ProductScreen() {
     name: "Componente",
     price: "$50",
     description: "Descripcion del producto",
-    image: "https://via.placeholder.com/300",
+    image: "https://i.pinimg.com/736x/e3/de/d6/e3ded6b09a25c557fe2277a63bbc123f.jpg",
   };
 
   return (
