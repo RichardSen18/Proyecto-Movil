@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1017786033382",
+    "project_id": "tecnosale-403ab",
+    "storage_bucket": "tecnosale-403ab.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017786033382:android:89b42ae7172955af8a0727",
+        "android_client_info": {
+          "package_name": "com.towerscompany.TecnoSale"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8jmIpUliddzPqN22eXFIlkwNnqhBLZbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

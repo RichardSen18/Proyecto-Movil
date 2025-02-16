@@ -12,9 +12,43 @@ import FormItem from "../components/controls/Form_item";
 import Colors from "../constants/Colors";
 import Fonts from "../constants/Fonts";
 
+// Importamos la función de autenticación de Firebase
+import { auth } from "../firebase-config";
+import { loginWithEmailPass } from "../services/firebase";
+import { useState, useEffect } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+
 export default function Login({ navigation }) {
-  const goToHome = () => {
-    navigation.navigate("Dashboard");
+  const [user, setUser] = useState("");
+  const [pass, setPass] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    // Nos suscribimos al evento que detecta cuando el usuario ya inicio sesión
+    const subscriber = onAuthStateChanged(auth, (response) => {
+      if (response) {
+        navigation.navigate("Dashboard");
+      }
+    });
+    return subscriber;
+  }, [auth]);
+
+  const login = async () => {
+    if (user && pass) {
+      setLoading(true);
+      await loginWithEmailPass(user, pass);
+      setUser("");
+      setPass("");
+      setLoading(false);
+    }
+  };
+
+  const onChangeUser = (value) => {
+    setUser(value);
+  };
+
+  const onChangePass = (value) => {
+    setPass(value);
   };
 
   return (
@@ -26,9 +60,19 @@ export default function Login({ navigation }) {
 
       <Content_login>
         <Title title="Iniciar Sesión" />
-        <FormItem label="Nombre de usuario" style= {styles.texto}></FormItem>
-        <FormItem label="Contraseña"></FormItem>
-        <Button label="ACCEDER" onPress={goToHome} />
+        <FormItem
+          label="Nombre de usuario"
+          keyboardType="email-address"
+          onChange={onChangeUser}
+          style={styles.texto}
+        ></FormItem>
+        <FormItem
+          label="Contraseña"
+          value={pass}
+          secure={true}
+          onChange={onChangePass}
+        ></FormItem>
+        <Button label="ACCEDER" onPress={login} isLoading={loading} />
       </Content_login>
     </View>
   );
@@ -37,7 +81,7 @@ export default function Login({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.purple
+    backgroundColor: Colors.purple,
   },
   imagen: {
     marginBottom: 20,
@@ -60,5 +104,5 @@ const styles = StyleSheet.create({
   texto: {
     fontSize: Fonts.size.normal,
     fontFamily: Fonts.family.regular,
-  }
+  },
 });
