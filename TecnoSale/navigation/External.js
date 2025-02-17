@@ -4,6 +4,7 @@ import Welcome from "../screens/Welcome";
 import Signup from "../screens/Signup";
 import Shoping from "../screens/Shoping";
 import Producto from "../screens/Producto"
+import Profile from "../screens/Profile";
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +29,11 @@ export default function External() {
       <Stack.Screen
         name="Producto"
         component={Producto}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Profile"
+        component={Profile}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

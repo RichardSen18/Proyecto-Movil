@@ -62,6 +62,7 @@ export default function Login({ navigation }) {
         <Title title="Iniciar Sesión" />
         <FormItem
           label="Nombre de usuario"
+          value={user}
           keyboardType="email-address"
           onChange={onChangeUser}
           style={styles.texto}
