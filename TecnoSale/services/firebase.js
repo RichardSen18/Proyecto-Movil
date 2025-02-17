@@ -33,7 +33,7 @@ export const registerEmailPass = async (user) => {
     // Guardamos la información en un documento de Firestore
     await setDoc(userRef, {
       email: user.email,
-      full_name: user.full_name,
+      name: user.name,
     });
     return true;
   } catch (error) {
