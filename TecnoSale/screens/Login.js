@@ -61,7 +61,7 @@ export default function Login({ navigation }) {
       <Content_login>
         <Title title="Iniciar Sesión" />
         <FormItem
-          label="Nombre de usuario"
+          label="Correo"
           value={user}
           keyboardType="email-address"
           onChange={onChangeUser}

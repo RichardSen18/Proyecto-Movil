@@ -12,7 +12,20 @@
           "package_name": "com.towerscompany.TecnoSale"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1017786033382-5n68a4h8tm0291eq9g4hssf66uui3jdr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.towerscompany.TecnoSale",
+            "certificate_hash": "718341957a1af2a76cdec53bce8ba7bf2ef59246"
+          }
+        },
+        {
+          "client_id": "1017786033382-vrkhblqdg9clss4g10bmbd96smnihr0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyA8jmIpUliddzPqN22eXFIlkwNnqhBLZbU"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017786033382-vrkhblqdg9clss4g10bmbd96smnihr0p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

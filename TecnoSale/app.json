@@ -20,7 +20,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.towerscompany.TecnoSale",
-      "googleServicesFile": ".google-services.json"
+      "googleServicesFile": "./google-services.json"
 
     },
     "web": {
